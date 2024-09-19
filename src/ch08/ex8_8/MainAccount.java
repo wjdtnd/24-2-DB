@@ -17,7 +17,7 @@ public class MainAccount {
         int balance=scanner2.nextInt();
 
         //처음 통장 개설 했을때
-        Account account=new Account(account.getName(),account.getPwd(),balance);
+        Account account=new Account(balance, accountName, accountPwd);
         System.out.println(account);
 
         //통장에서 10000원 출금
@@ -27,7 +27,7 @@ public class MainAccount {
         account.deposit(deposit);
 
         //통장에서 2600000원 입금
-        System.out.println("출금하실 금액을 입력해주세요. : ");
+        System.out.println("입금하실 금액을 입력해주세요. : ");
         int withDraw=scanner2.nextInt();
 
         account.withdraw(withDraw);
