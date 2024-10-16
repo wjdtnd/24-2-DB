@@ -11,6 +11,10 @@ public class AccountTest {
        this.balance=balance;
     }
 
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
     public int getBalance() {
         return balance;
     }
@@ -19,20 +23,20 @@ public class AccountTest {
         return num;
     }
 
-    public int outMoney(int balance) {
-      return this.balance - balance;
-    };
-
-    public int inputMoney(int balance) {
-        return this.balance+balance;
-    }
-
-    public boolean transfer(Account account,int amount){
-        if(balance<amount){
-            System.out.println("잔액이 부족하여 이체 불가능!!!");
+    public boolean transfer(AccountTest account,int amount) {
+        if (balance >= amount) {
+            account.balance += amount;
+            return true;
+        } else {
             return false;
         }
-        balance-=amount;
-        return true;
-    };
+    }
+
+    @Override
+    public String toString() {
+        return "AccountTest{" +
+                "num='" + num + '\'' +
+                ", balance=" + balance +
+                '}';
+    }
 }
