@@ -55,7 +55,7 @@ public class BookManagementController {
             return;
         }
 
-        // 모든 도서의 정보를 출력
+        // 도서 정보 출력
         for (int i = 0; i < books.size(); i++) {
             BookDTO book = books.get(i);
             System.out.println("책 " + (i + 1) + ": ");
@@ -81,7 +81,7 @@ public class BookManagementController {
             return;
         }
 
-        // 각 도서의 제목만 출력
+        // 현재 저장된 책 제목 출력
         for (int i = 0; i < books.size(); i++) {
             System.out.println((i + 1) + ". 제목: " + books.get(i).getInputTitle());
         }
@@ -93,7 +93,7 @@ public class BookManagementController {
                 "================================\n");
 
         displayBookTitles(); // 제목만 표시하여 수정할 책 선택
-        System.out.println("수정할 책의 인덱스를 입력해주세요 (1부터 시작): ");
+        System.out.println("수정할 책의 인덱스를 입력해주세요 : ");
         int bookIndex = scanner.nextInt() - 1;
         scanner.nextLine();
 
@@ -103,7 +103,7 @@ public class BookManagementController {
         }
 
         System.out.println("수정할 정보를 선택해주세요: \n" +
-                "[0] 책 제목 [1] 저자명 [2] 출판사 [3] 가격 [4] 장르 [5] 페이지 수 [6] 언어 [7] ISBN [8] 발행년도 [9] 전자책 여부");
+                "[1] 책 제목 [2] 저자명 [3] 출판사 [4] 가격 [5] 장르 [6] 페이지 수 [7] 언어 [8] ISBN [9] 발행년도 [10] 전자책 여부");
         int updateNum = scanner.nextInt();
         scanner.nextLine();
 
@@ -111,34 +111,34 @@ public class BookManagementController {
         String updateInfo = scanner.nextLine();
 
         switch (updateNum) {
-            case 0:
+            case 1:
                 books.get(bookIndex).setInputTitle(updateInfo);
                 break;
-            case 1:
+            case 2:
                 books.get(bookIndex).setInputAuthor(updateInfo);
                 break;
-            case 2:
+            case 3:
                 books.get(bookIndex).setInputPublisher(updateInfo);
                 break;
-            case 3:
+            case 4:
                 books.get(bookIndex).setInputPrice(updateInfo);
                 break;
-            case 4:
+            case 5:
                 books.get(bookIndex).setInputGenre(updateInfo);
                 break;
-            case 5:
+            case 6:
                 books.get(bookIndex).setInputPage(updateInfo);
                 break;
-            case 6:
+            case 7:
                 books.get(bookIndex).setInputLanguage(updateInfo);
                 break;
-            case 7:
+            case 8:
                 books.get(bookIndex).setInputISBN(updateInfo);
                 break;
-            case 8:
+            case 9:
                 books.get(bookIndex).setInputYear(updateInfo);
                 break;
-            case 9:
+            case 10:
                 boolean inputBoolean = updateInfo.equalsIgnoreCase("Yes");
                 books.get(bookIndex).setInputBoolean(inputBoolean);
                 break;
@@ -155,7 +155,7 @@ public class BookManagementController {
                 "================================\n");
 
         displayBookTitles(); // 제목만 표시하여 삭제할 책 선택
-        System.out.println("삭제할 책의 인덱스를 입력해주세요 (1부터 시작): ");
+        System.out.println("삭제할 책의 인덱스를 입력해주세요 : ");
         int bookIndex = scanner.nextInt() - 1;
         scanner.nextLine();
 
