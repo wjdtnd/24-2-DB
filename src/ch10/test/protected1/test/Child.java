@@ -6,6 +6,6 @@ public class Child extends Parent {
 
     public void testPro(){
         id="ProtectedId";
-        printProtected();
+        print();
     }
 }
