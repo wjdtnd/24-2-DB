@@ -1,4 +1,4 @@
-package ch11.ex11_5;
+package ch11.ex_11_5_6;
 
 public class Bicycle implements Vehicle {
     //추상메소드 필수로 오버라이딩 해야함 {}들어간거

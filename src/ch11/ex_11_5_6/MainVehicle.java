@@ -1,6 +1,4 @@
-package ch11.ex11_5;
-
-import ch10.ex10_8.Truck;
+package ch11.ex_11_5_6;
 
 public class MainVehicle {
     public static void main(String[] args) {

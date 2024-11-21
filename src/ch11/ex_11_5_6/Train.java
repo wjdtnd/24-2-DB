@@ -1,4 +1,4 @@
-package ch11.ex11_5;
+package ch11.ex_11_5_6;
 
 public class Train implements Vehicle{
     @Override
